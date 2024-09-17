@@ -1,66 +1,62 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Standard library imports
+# Impor pustaka standar
 import typing
 
-# Related third party imports
+# Impor pustaka pihak ketiga terkait
 from telebot import types, util
 import telebot
 import requests
 
-# Local application/library specific imports
+# Impor spesifik aplikasi/pustaka lokal
 import utils
 
-# Connect to bot
-# Token placed in utils.py file. You can change it with your token
+# Terhubung ke bot
+# Token ditempatkan di file utils.py. Anda dapat menggantinya dengan token Anda
 GPTbot: typing.ClassVar[typing.Any] = telebot.TeleBot(utils.TOKEN)
-print(f"The Bot is online (id: {GPTbot.get_me().id}) \33[0;31m[Initial MODE]\33[m...")
+print(f"Bot sedang online (id: {GPTbot.get_me().id}) \33[0;31m[MODE Awal]\33[m...")
 
-# Set bot commands
-print("[!] Configuring bot commands...")
+# Mengatur perintah bot
+print("[!] Mengonfigurasi perintah bot...")
 GPTbot.set_my_commands(
     commands=[
         types.BotCommand(
             command="start",
-            description="Start the bot"
-        ),
-        types.BotCommand(
-            command="help",
-            description="Show help message"
+            description="Mulai bot"
         ),
         types.BotCommand(
             command="ping",
-            description="Ping providers"
+            description="Ping penyedia layanan"
         ),
         types.BotCommand(
             command="settings",
-            description="Provider settings"
+            description="Pengaturan penyedia layanan"
         ),
         types.BotCommand(
             command="chat",
-            description="Chat in groups using this command"
+            description="Chat di grup menggunakan perintah ini"
         ),
         types.BotCommand(
             command="tts",
-            description="Brian Text To Speech response"
+            description="Respon Teks ke Suara Brian"
         ),
         types.BotCommand(
             command="history",
-            description="Get your chat history"
+            description="Dapatkan riwayat chat Anda"
         ),
         types.BotCommand(
             command="reset",
-            description="Reset you chat history"
+            description="Reset riwayat chat Anda"
         ),
         types.BotCommand(
             command="danmode",
-            description="Enable/Disable DAN mode v 10.0"
+            description="Aktifkan/Nonaktifkan mode DAN versi 10.0"
         ),
         types.BotCommand(
             command="features",
-            description="See features changes"
+            description="Lihat perubahan fitur"
         )
     ]
 )
-print("[!] Commands successfully configured.\n[!] Run main.py")
+print("[!] Perintah berhasil dikonfigurasi.\n[!] Jalankan main.py")

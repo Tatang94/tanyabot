@@ -1,0 +1,9 @@
+{
+    "deep_infra_chat": true,
+    "fakeopen_chat": false,
+    "free_gpt_4": false,
+    "fstha_chat_gpt": false,
+    "online_gpt_chat": false,
+    "uncensored_ai": false,
+    "remix_ai": false
+}

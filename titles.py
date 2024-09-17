@@ -1,132 +1,112 @@
-# Titles for chatGPT bot
-# So i store texts and titles here to avoid mess in main code.
+# Judul untuk bot ChatGPT
+# Saya menyimpan teks dan judul di sini untuk menghindari kekacauan dalam kode utama.
 
-# We have 4 type of welcome messages
-# First 2 is normal and second 2 is for deep-linking
-# User is new (/start):
+# Kami memiliki 4 jenis pesan sambutan
+# Dua yang pertama adalah normal dan dua lainnya untuk deep-linking
+# Pengguna baru (/start):
 welcome_1: str = (
-    "Hi {}\n\n"
-    "Welcome to ChatGPT bot!\n"
-    "Press /help if you need any help..."
+    "Hai {}\n\n"
+    "Selamat datang di TanyakanBot!\n"
+    "Tekan start untuk mulai..."
 )
-# User already have account (/start):
+# Pengguna sudah memiliki akun (/start):
 welcome_2: str = (
-    "Welcome back {}\n"
-    "Let's begin chat!"
+    "Selamat datang kembali {}\n"
+    "Mari mulai percakapan!"
 )
-# User is new (/start=create):
+# Pengguna baru (/start=create):
 welcome_3: str = (
-    "Hi {}\n"
-    "Your account has been created! Enjoy."
+    "Hai {}\n"
+    "Akun Anda telah dibuat! Nikmati."
 )
-# User already have account (/start?create):
+# Pengguna sudah memiliki akun (/start?create):
 welcome_4: str = (
-    "Hi {}\n"
-    "You already have account."
+    "Hai {}\n"
+    "Anda sudah memiliki akun."
 )
 
-# No account prompt for users with no accounts:
+# Peringatan tanpa akun untuk pengguna yang belum memiliki akun:
 no_account_warn: str = (
-    "Dear {}\n\n"
-    "You need to start the bot before using it! "
-    "We need to create an account for you first:\n\n"
+    "Yth. {}\n\n"
+    "Anda perlu memulai bot sebelum menggunakannya! "
+    "Kami perlu membuat akun untuk Anda terlebih dahulu:\n\n"
     "t.me/{}?start=create"
 )
 
-# History cleared prompt:
+# Pemberitahuan riwayat dihapus:
 history_cleared: str = (
-    "Dear {}\n\n"
-    "Your history cleared successfully."
+    "Yth. {}\n\n"
+    "Riwayat Anda berhasil dihapus."
 )
 
-# Dan mode prompts for /danmode command
-# Dan mode enabled:
+# Dan mode untuk perintah /danmode
+# Dan mode diaktifkan:
 dan_mode_enabled: str = (
-    "DAN mode _version 10.0!_\n"
-    "Status: *Enabled*"
+    "DAN mode _versi 10.0!_\n"
+    "Status: *Diaktifkan*"
 )
-# Dan mode disabled:
+# Dan mode dinonaktifkan:
 dan_mode_disabled: str = (
-    "DAN mode _version 10.0!_\n"
-    "Status: *Disabled*\n\n"
-    "Note: History file also reset!"
+    "DAN mode _versi 10.0!_\n"
+    "Status: *Dinonaktifkan*\n\n"
+    "Catatan: File riwayat juga direset!"
 )
 
-# Help prompt for (/help) command:
-help_message: str = (
-    "*List of global commands*:\n"
-    "1. /start: Start bot\n"
-    "2. /help: Show this message\n"
-    "3. /ping: Ping the Providers\n\n"
-    "*List of chat related commands*:\n"
-    "1. /reset: Reset chat history\n"
-    "2. /history: Get chat history\n"
-    "3. /chat: Chat in groups\n"
-    "4. /tts: Voice response\n"
-    "4. /settings: Providers settings\n"
-    "4. /danmode: Use DAN mode in GPT\n\n"
-    "*Other commands*:\n"
-    "1. /features: See feature changes\n\n"
-    "*Inline usage* (copy):\n"
-    "`@{} roles`\n"
-    "this will show all available roles.\n"
-)
-
-# Features prompt for (/features) command
+# Fitur untuk perintah (/features)
 features: str = (
-    "*Main features*:\n"
-    "1. Includes long-term memory\n"
-    "2. Includes roles and DAN mode\n"
-    "3. Supports both group and private chat\n"
-    "4. Includes re-generate option\n"
-    "5. Voice response\n\n"
-    "*Other features*:\n"
+    "*Fitur utama*:\n"
+    "1. Memiliki memori jangka panjang\n"
+    "2. Mendukung peran dan mode DAN\n"
+    "3. Mendukung chat di grup dan privat\n"
+    "4. Termasuk opsi regenerasi\n"
+    "5. Respon suara\n\n"
+    "*Fitur lainnya*:\n"
     "1. MarkdownV2 escaper\n"
-    "2. History checker and fixer\n\n"
-    "*Upcoming Features*:\n"
-    "1. Smart reply option\n"
-    "2. Code generator\n"
-    "3. Image generator\n"
-    "5. Multi language\n\n"
-    "Please submit your Issue or Request in here:\n"
-    "https://github.com/kozyol/AwesomeChatGPTBot/issues\n\n"
-    "*Recent changes*:\n"
-    "# Added more providers.\n"
-    "# Added Remix AI."
+    "2. Pengecek dan perbaikan riwayat\n\n"
+    "*Fitur yang akan datang*:\n"
+    "1. Opsi balasan pintar\n"
+    "2. Generator kode\n"
+    "3. Generator gambar\n"
+    "5. Multi bahasa\n\n"
+    "Silakan kirim masalah atau permintaan Anda di sini:\n"
+    "https://github.com/Tatang94/tanyabot/issues\n\n"
+    "*Perubahan terbaru*:\n"
+    "# Menambahkan lebih banyak penyedia.\n"
+    "# Menambahkan Remix AI."
 )
 
-# Usage help for (/chat) command:
+# Bantuan penggunaan untuk perintah (/chat):
 chat_help: str = (
-    "Hi {}\n"
-    "Please Ask your question after /chat\n\n"
-    "*Example*: /chat hi"
+    "Hai {}\n"
+    "Silakan ajukan pertanyaan Anda setelah /chat\n\n"
+    "*Contoh*: /chat hai"
 )
 
-# Usage for (/tts) command:
+# Penggunaan untuk perintah (/tts):
 tts_help: str = (
-    "Hi {}\n"
-    "Please Ask your question after /tts\n\n"
-    "*Example*: /tts hi"
+    "Hai {}\n"
+    "Silakan ajukan pertanyaan Anda setelah /tts\n\n"
+    "*Contoh*: /tts hai"
 )
 
-# Response prompt:
+# Prompt respon:
 response_prompt: str = (
-    "Generating response... Please wait."
+    "Menghasilkan respon... Mohon tunggu."
 )
 
-# Response prompt:
+# Prompt respon suara:
 tts_response_prompt: str = (
-    "Generating voice response... Please wait. (It can take up to minute!)"
+    "Menghasilkan respon suara... Mohon tunggu. (Ini bisa memakan waktu hingga satu menit!)"
 )
 
-# GPT response error:
+# Kesalahan respon GPT:
 response_error: str = (
-    "Error!\n"
-    "ChatGPT is not responding at this time!"
+    "Kesalahan!\n"
+    "ChatGPT tidak merespons saat ini!"
 )
 
-# Settings prompt
+# Prompt pengaturan
 settings_prompt: str = (
-    "Your providers:\n"
-    "You can Enable/Disable them by clicking on them."
+    "Penyedia Anda:\n"
+    "Anda bisa Aktifkan/Nonaktifkan dengan mengkliknya."
 )
