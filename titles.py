@@ -7,7 +7,7 @@
 welcome_1: str = (
     "Hai {}\n\n"
     "Selamat datang di TanyakanBot!\n"
-    "Tekan start untuk mulai..."
+    "Silahkan Mulai Bertanya ..."
 )
 # Pengguna sudah memiliki akun (/start):
 welcome_2: str = (
